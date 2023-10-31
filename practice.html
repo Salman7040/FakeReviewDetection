@@ -20,26 +20,78 @@
         }
 
         .star {
-
             user-select: none;
             cursor: pointer;
             color: rgb(194, 191, 191);
             font-size: 30px;
+            transition: all ease 1s;
+        }
+        .star:hover
+        {
+            scale: 1.5;
+
         }
 
         form {
             margin-top: 20px;
         }
+
+        .left {
+            position: relative;
+            top: 11rem;
+            border: none;
+            color: transparent;
+            background: transparent;
+            height: 30px;
+            font-size: 20px;
+            transition: all ease 1s;
+        }
+
+        .right {
+            position: relative;
+            left: 11.7rem;
+            top: 11rem;
+            border: none;
+            color: transparent;
+            background: transparent;
+            height: 30px;
+            font-size: 20px;
+            transition: all ease 1s;
+        }
+
+        .left:hover {
+            scale: 1;
+            background-color: gray;
+
+            color: black;
+        }
+
+        .right:hover {
+            scale: 1;
+            background-color: gray;
+            color: black;
+        }
+
+        #imageSlider{
+            border: 2px solid gray;
+            width: 260px;
+    
+        }
+   
+
     </style>
 </head>
 
 <body>
     <div class="con">
-        <div id="imgeSlider">
+        <button onclick="left()" class="left">&lt;&lt;</button>
+        <button onclick="right()" class="right">&gt;&gt;</button>
+        <div id="imageSlider">
             <img src="./iphone/iphone1.png" alt="iphone">
         </div>
-        <button onclick="left()">⬅ left</button>
-        <button onclick="right()">right ➡</button>
+
+
+
         <div class="rev">
 
             <div class="ratin-showing">
@@ -117,16 +169,17 @@
 
 
         let flag = false
-        let getImage = document.getElementById("imgeSlider")
+        let getImage = document.getElementById("imageSlider")
         let i = 1
         function right() {
 
             flag = true
             i++
+            if (i >= 8)
+                i = 1
             getImage.innerHTML = "<img src=./iphone/iphone" + i + ".png >"
-            if (i >= 7)
-                i = 0
-            
+           
+
         }
 
         function left() {
@@ -141,8 +194,8 @@
             if (i <= 0)
                 i = 7
             getImage.innerHTML = "<img src=./iphone/iphone" + i + ".png>"
-            
-          
+
+
         }
 
     </script>
