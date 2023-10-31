@@ -7,10 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .con img {
-            height: 300px;
-            width: 250px;
+        .con #imageSlider img {
+            height: 100%;
+            width: 100%;
+            transition: all ease 1s;
+            
         }
+        .con #imageSlider img:active{
+    scale: 1.4;
+        }
+        
 
         .rating-container {
             display: grid;
@@ -75,7 +81,6 @@
         #imageSlider{
             border: 2px solid gray;
             width: 260px;
-    
         }
    
 
