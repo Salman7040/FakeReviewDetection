@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating</title>
+    <style>
+        .rating-container{
+        display: grid;
+        grid-template-columns: 50px 50px 50px 50px 50px;
+        grid-template-rows: 50px 50px 50px 50px 50px ;
+        
+        gap: 30px;
+    
+    }
+    .star{
+     cursor: pointer;   
+     color:rgb(194, 191, 191);
+     font-size: 100px;  
+    }
+   
+    
+    </style>
+</head>
+<body>
+    <div class="ratin-showing">
+        <h1>Rating: <span class="no">0</span> </h1>
+    </div>
+    <div class="rating-container">
+        <div class="star" onclick="colorChange(0)">&#9733;</div>
+        <div class="star" onclick="colorChange(1)">&#9733;</div>
+        <div class="star" onclick="colorChange(2)">&#9733;</div>
+        <div class="star" onclick="colorChange(3)">&#9733;</div>
+        <div class="star" onclick="colorChange(4)">&#9733;</div>
+    </div>
+
+    
+
+   <script>
+    let star=document.getElementsByClassName("star")
+    let no=document.getElementsByClassName("no")
+    let increse=0
+    let inc=0
+   let validate_index=[]
+  validate_index[0]=-1
+let last=0
+    function colorChange(val){ 
+    
+        if(validate_index.includes(val)==true ){   
+        
+            if(increse==1)
+                val=-1
+            
+            for(let end=4;end>val;end--){            
+            star[end].style="color:rgb(194, 191, 191);"
+
+            if(validate_index.includes(end)==true) {
+            increse-- 
+            inc--
+            if(increse<0){
+            increse=0
+            inc=0
+            }
+            no[0].innerHTML=increse                 
+            let search_val=validate_index.indexOf(end)
+            validate_index.splice(search_val,1) 
+                }
+        }           
+        }
+        else{
+        
+            increse=0
+            inc=0
+        for(let st=0;st<=val;st++){
+            star[st].style="color:yellow;"   
+            increse++  
+            if(validate_index.length<5){
+            validate_index[inc]=st
+            inc++
+            }    
+        }                
+            no[0].innerHTML=increse    
+        }
+    }
+
+    
+    
+    
+   </script>
+</body>
+</html>

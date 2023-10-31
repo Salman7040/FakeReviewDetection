@@ -1,0 +1,38 @@
+#main-page{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#main-page .phone{
+    transition: all ease 1s;
+    margin: 2rem 0 0 2rem;
+    width: 26rem;
+    height: 35rem;
+    border: 0.2rem solid rgb(171, 171, 171);
+}
+
+#main-page .phone:hover{
+    scale: 1.1;
+    box-shadow: 4px 7px 4px gray;
+    background-color: white;
+}
+
+
+#main-page .phone img{
+    height: 30rem;
+    width: 25rem;
+    margin-left: 0.3rem;
+}
+#main-page .phone a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+
+.p-sym{
+    font-size: 15px;
+}
+#main-page .phone h1,h2{
+    margin-left: 3rem;
+}
