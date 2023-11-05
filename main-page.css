@@ -1,7 +1,7 @@
 #main-page{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 #main-page .phone{
     transition: all ease 1s;
@@ -36,3 +36,5 @@
 #main-page .phone h1,h2{
     margin-left: 3rem;
 }
+
+

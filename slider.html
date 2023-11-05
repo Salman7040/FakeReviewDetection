@@ -17,7 +17,7 @@
 
 <body>
     <div id="imgeSlider">
-        <img src="img1.jpeg" alt="">
+        <img src="./iphone/iphone1.png" alt="">
     </div>
     <button onclick="left()">⬅ left</button>
     <button onclick="right()">right ➡</button>
@@ -27,16 +27,18 @@
         let getImage = document.getElementById("imgeSlider")
         let i = 1
         function right() {
-            getImage.innerHTML = "<img src=img" + i + ".jpeg >"
-            if (i >= 4)
-                i = 1
             i++
+            getImage.innerHTML = "<img src='./iphone/iphone"+i+".png' alt='iphone'>"
+            if (i >= 7)
+                i = 0
+            
         }
         function left() {
             i--
-            getImage.innerHTML = "<img src=img" + i + ".jpeg >"
-            if (i == 1)
-                i = 4
+            if (i < 1)
+                i = 7
+            getImage.innerHTML = "<img src='./iphone/iphone"+i+".png' alt='iphone'>"
+            
         }
     </script>
 </body>

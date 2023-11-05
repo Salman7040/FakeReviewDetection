@@ -7,9 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .con img {
+        .con #imageSlider img {
             height: 300px;
             width: 250px;
+            transition: all ease 1.3s;
+            
+        }
+
+       .con #imageSlider img:active{
+            scale: 1.4;
+
         }
 
         .rating-container {
@@ -20,28 +27,58 @@
         }
 
         .star {
-
             user-select: none;
             cursor: pointer;
             color: rgb(194, 191, 191);
             font-size: 30px;
+            transition: all ease 1s;
+        }
+        .star:hover{
+            scale: 1.6;
+            
+
         }
 
         form {
             margin-top: 20px;
+        }
+
+        #fullCon {
+            border: 2px solid rgb(199, 197, 197);
+
+            margin: 20px 0 0 20px;
+            display: flex;
+            justify-content: space-evenly;
+            width: 330px;
+
+        }
+
+        button {
+            width: 60px;
+            border: none;
+            background-color: transparent;
+            color: transparent;
+            transition: all ease 1s;
+        }
+
+        button:hover {
+            color: black;
+            background-color: rgb(237, 232, 232);
         }
     </style>
 </head>
 
 <body>
     <div class="con">
-        <div id="imgeSlider">
-            <img src="./iphone/iphone1.png" alt="iphone">
+        <div id="fullCon">
+            <button onclick="left()">⬅ left</button>
+            <div id="imageSlider">
+                <img src="./iphone/iphone1.png" alt="iphone">
+            </div>
+            <button onclick="right()">right ➡</button>
         </div>
-        <button onclick="left()">⬅ left</button>
-        <button onclick="right()">right ➡</button>
+        
         <div class="rev">
-
             <div class="ratin-showing">
                 <h1>Rating: <span class="no">0</span> </h1>
             </div>
@@ -117,7 +154,7 @@
 
 
         let flag = false
-        let getImage = document.getElementById("imgeSlider")
+        let getImage = document.getElementById("imageSlider")
         let i = 1
         function right() {
 
@@ -126,7 +163,7 @@
             getImage.innerHTML = "<img src=./iphone/iphone" + i + ".png >"
             if (i >= 7)
                 i = 0
-            
+
         }
 
         function left() {
@@ -138,11 +175,11 @@
                 i = 7
                 flag = true
             }
-            if (i <= 0)
+            if (i < 1)
                 i = 7
             getImage.innerHTML = "<img src=./iphone/iphone" + i + ".png>"
-            
-          
+
+
         }
 
     </script>
