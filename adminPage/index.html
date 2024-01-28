@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Configeation</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .containt iframe {
+            position: relative;
+            bottom: 28px;
+            outline: none;
+            border: none;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="head">
+        <h1>Admin</h1>
+    </div>
+    <div class="action" >
+        <button onclick="pageCall('userDetails')">
+            <h1>User Login Details</h1>
+        </button>
+        <button onclick="pageCall('UserFeadbacks')">
+            <h1>User Feadbacks</h1>
+        </button>
+
+    </div>
+    <div class="action containt">
+        
+    </div>
+</body>
+<script>
+    let containt = document.getElementsByClassName("containt")
+
+function pageCall(pageName){
+    containt[0].innerHTML="<iframe src='"+pageName+".php' width='100%' height='100%'></iframe>"
+}
+</script>
+
+</html>

@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+#con #imageSlider img {
+  height: 20vmax;
+  width: 18vmax;
+  transition: all ease 1.3s;
+}
+
+#con #imageSlider img:active {
+  scale: 1.3;
+}
+
+.rating-container {
+  height: 80px;
+  width: 95%;
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px 50px;
+  justify-content: center;
+}
+
+.star {
+  user-select: none;
+  cursor: pointer;
+  color: rgb(194, 191, 191);
+  font-size: 55px;
+  transition: all ease 1s;
+}
+
+.star:hover {
+  scale: 1.4;
+}
+
+#fullCon {
+  border: 2px solid rgb(199, 197, 197);
+  /* margin: 15px 0 0 30px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 31vmax;
+  height: 45vh;
+}
+
+#fullCon button {
+  height: 80px;
+  font-size: 25px;
+}
+
+button {
+  width: 60px;
+  border: none;
+  background-color: transparent;
+  color: transparent;
+  transition: all ease 1s;
+}
+
+button:hover {
+  color: black;
+  background-color: rgb(237, 232, 232);
+}
+form {
+  margin-top: 8vh;
+  height: 35vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+form textarea {
+  padding: 5px 0 0 5px;
+  width: 31vw;
+  height: 11vw;
+  font-size: 25px;
+  border: 2px solid gray;
+}
+
+form input[type="submit"] {
+  background: rgb(167, 84, 246);
+  font-size: 32px;
+  height: 41px;
+  font-weight: bolder;
+  width: 31vw;
+}
+form input[type="submit"]:active {
+  box-shadow: 3px 4px 2px gray;
+  text-shadow: 2px 3px 3px gray;
+}
+form input[type="submit"]:active {
+  background-color: rgb(196, 144, 245);
+}
+
+/*============ graph style ============*/
+#graphCon {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  width: 31vw;
+  font-size: 11px;
+  height: 220px;
+  padding: 15px;
+  border: 2px solid gray;
+}
+#graphCon #column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.con-graph {
+  margin-top: 10px;
+  height: 3vh;
+  width: 14.5vmax;
+  border: 1px solid;
+}
+
+.ratingShow {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.percent {
+  position: relative;
+  top: 4px;
+  left: 10px;
+}
+
+.starRating {
+  font-size: 23px;
+  margin: 5px 18px 0 0;
+}
+
+#con {
+  
+  float: left;
+  display: inline-block;
+  padding-top: 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 150vh;
+  width: 35vw;
+  background-color: antiquewhite;
+}
+
+/*======= productDetails css ====== */
+
+#productDetails {
+   float: right;
+  display: inline-block;
+  height: 150vh;
+  /* background-color: crimson; */
+  width: 65vw;
+}
+
+/*============= userfeadbacks========== */
+#userfeadbacks {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vmax;
+  width: 100vw;
+  background-color: aqua;
+  align-items: baseline;
+  gap: 10px;
+}
+
+#userfeadbacks .content {
+  padding: 10px 10px 0 10px;
+  min-width: 30vw;
+  max-width: 95vw;
+  min-height: 20vh;
+  border: 1px solid;
+  background-color: aliceblue;
+  position: relative;
+  top: 30px;
+  left: 20px;
+  line-height: 30px;
+}
+
+#userfeadbacks .content .userName {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+#userfeadbacks .content .userRating {
+  font-size: 13px;
+}
+
+#userfeadbacks .content .userText {
+  font-size: 25px;
+}
